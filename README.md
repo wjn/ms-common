@@ -1,2 +1,2 @@
-# ms-lib
+# ms-common
 shared library for ticketing microservices exercise
