@@ -1,3 +1,5 @@
+// allows for importing just @nielsendigital/common
+
 // ERRORS
 export * from './errors/bad-request-error';
 export * from './errors/custom-error';
