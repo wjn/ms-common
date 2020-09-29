@@ -1,4 +1,4 @@
-// allows for importing just @nielsendigital/common
+// allows for importing just @nielsendigital/ms-common
 
 // ERRORS
 export * from './errors/bad-request-error';
