@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { CustomError } from '../errors/custom-error';
+
 // Create a consistent error response for all services.
 export const errorHandler = (
   err: Error,
@@ -11,7 +12,9 @@ export const errorHandler = (
     return res.status(err.statusCode).send({ errors: err.serializeErrors() });
   }
 
-  return res
-    .status(400)
-    .send({ errors: [{ message: 'Something went wrong' }] });
+  // Unexpected errors get logged
+  console.error(err);
+  return res.status(400).send({
+    errors: [{ message: 'Something went wrong. Error not recognized.' }],
+  });
 };
