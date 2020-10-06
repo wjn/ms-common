@@ -1,7 +1,8 @@
 export enum LogType {
-  INFO = 'INFO',
-  ERROR = 'ERROR',
-  SUCCESS = 'SUCCESS',
-  FAIL = 'FAILURE',
   ABORT = 'ABORT',
+  ALERT = 'ALERT',
+  ERROR = 'ERROR',
+  FAIL = 'FAILURE',
+  INFO = 'INFO',
+  SUCCESS = 'SUCCESS',
 }
