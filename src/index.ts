@@ -13,6 +13,9 @@ export * from './errors/request-validation-error';
 // contains nested barrells
 export * from './events';
 
+// LOGGER
+export * from './logger/logger';
+
 // MIDDLEWARES
 export * from './middlewares/current-user';
 export * from './middlewares/error-handler';
