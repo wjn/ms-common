@@ -9,9 +9,9 @@ class LogIt {
     this.msg = msg;
     let prefix = `[${this.type}]`;
     if (typeof msg === 'object') {
-      console.log(`[${prefix}]`, this.msg);
+      console.log(prefix, this.msg);
     } else {
-      console.log(`[${prefix}] ${this.msg}`);
+      console.log(`${prefix} ${this.msg}`);
     }
   }
 }
