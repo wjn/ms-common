@@ -1,4 +1,4 @@
-enum LogType {
+export enum LogType {
   INFO = 'INFO',
   ERROR = 'ERROR',
   SUCCESS = 'SUCCESS',
@@ -6,7 +6,7 @@ enum LogType {
   ABORT = 'ABORT',
 }
 
-class Log {
+class LogIt {
   private type: LogType = LogType.INFO;
   private msg: string = '';
 
@@ -18,4 +18,4 @@ class Log {
   }
 }
 
-export { LogType, Log };
+export const logIt = new LogIt();
