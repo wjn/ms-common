@@ -1,11 +1,4 @@
-export enum LogType {
-  INFO = 'INFO',
-  ERROR = 'ERROR',
-  SUCCESS = 'SUCCESS',
-  FAIL = 'FAILURE',
-  ABORT = 'ABORT',
-}
-
+import { LogType } from '../enums/LogType';
 class LogIt {
   private type: LogType = LogType.INFO;
   private msg: string = '';

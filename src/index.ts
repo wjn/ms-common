@@ -14,7 +14,7 @@ export * from './errors/request-validation-error';
 export * from './events';
 
 // LOGGER
-export * from './logger/logger';
+export * from './logger';
 
 // MIDDLEWARES
 export * from './middlewares/current-user';
