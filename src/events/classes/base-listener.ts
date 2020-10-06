@@ -1,5 +1,5 @@
 import nats, { Message, Stan } from 'node-nats-streaming';
-import { BaseEvent } from './interfaces';
+import { BaseEvent } from '../interfaces';
 
 export abstract class Listener<T extends BaseEvent> {
   abstract topic: T['topic'];
