@@ -3,6 +3,9 @@ export enum LogType {
   ALERT = 'ALERT',
   ERROR = 'ERROR',
   FAIL = 'FAILURE',
+  LISTEN = 'LISTEN',
   INFO = 'INFO',
+  STARTED = 'START',
+  STOPPED = 'STOPPED',
   SUCCESS = 'SUCCESS',
 }
