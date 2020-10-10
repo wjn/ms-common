@@ -1,5 +1,6 @@
 import nats, { Message, Stan } from 'node-nats-streaming';
 import { BaseEvent } from '../interfaces';
+import { logIt, LogType } from '../../logger';
 
 export abstract class Listener<T extends BaseEvent> {
   abstract topic: T['topic'];
@@ -46,7 +47,8 @@ export abstract class Listener<T extends BaseEvent> {
     subscription.on('message', (msg: Message) => {
       const sequence = msg.getSequence();
 
-      console.log(
+      logIt.out(
+        LogType.RECEIVED,
         `[${this.topic}] [msg #${sequence}]  for ${this.queueGroupName} (queueGroup).`
       );
 

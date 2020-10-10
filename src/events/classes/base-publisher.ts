@@ -1,5 +1,6 @@
 import { Stan } from 'node-nats-streaming';
 import { BaseEvent } from '../interfaces';
+import { logIt, LogType } from '../../logger';
 
 export abstract class Publisher<T extends BaseEvent> {
   abstract topic: T['topic'];
@@ -17,7 +18,9 @@ export abstract class Publisher<T extends BaseEvent> {
         if (err) {
           return reject(err);
         }
-        console.log(`${this.topic} event published to NATS`);
+
+        logIt.out(LogType.SENT, `${this.topic} event published to NATS`);
+
         resolve();
       });
     });

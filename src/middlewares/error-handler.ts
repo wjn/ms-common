@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { CustomError } from '../errors/custom-error';
+import { logIt, LogType } from '../logger';
 
 // Create a consistent error response for all services.
 export const errorHandler = (
@@ -13,7 +14,8 @@ export const errorHandler = (
   }
 
   // Unexpected errors get logged
-  console.error(err);
+  logIt.out(LogType.ERROR, err);
+
   return res.status(400).send({
     errors: [{ message: 'Something went wrong. Error not recognized.' }],
   });

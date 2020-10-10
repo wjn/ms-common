@@ -1,2 +1,2 @@
 export * from './enums/LogType';
-export * from './classes/logger';
+export * from './classes/LogIt';
