@@ -1,6 +1,8 @@
 export enum LogType {
   ABORT = 'ABORT',
   ALERT = 'ALERT',
+  CONNECT = 'CONNECT',
+  DISCONNECT = 'DISCONNECT',
   ERROR = 'ERROR',
   FAIL = 'FAILURE',
   LISTEN = 'LISTEN',
@@ -10,4 +12,5 @@ export enum LogType {
   STARTED = 'START',
   STOPPED = 'STOPPED',
   SUCCESS = 'SUCCESS',
+  WARNING = 'WARNING',
 }
