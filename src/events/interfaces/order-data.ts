@@ -1,0 +1,11 @@
+import { OrderStatus } from '../enums/order-status';
+import { TicketData } from '../interfaces';
+
+export interface OrderData {
+  id: string;
+  status: OrderStatus;
+  userId: string;
+  // converted from Date object
+  expiresAt: string;
+  ticket: TicketData;
+}
