@@ -19,7 +19,7 @@ export abstract class Publisher<T extends BaseEvent> {
           return reject(err);
         }
 
-        logIt.out(LogType.SENT, `${this.topic} event published to NATS`);
+        logIt.out(LogType.SENT, `[${this.topic}] event published to NATS`);
 
         resolve();
       });
