@@ -49,7 +49,7 @@ export abstract class Listener<T extends BaseEvent> {
 
       logIt.out(
         LogType.RECEIVED,
-        `[${this.topic}] [msg #${sequence}]  for ${this.queueGroupName} (queueGroup).`
+        `[${this.topic}] [msg #${sequence}] for ${this.queueGroupName} (queueGroup).`
       );
 
       const parsedData = this.parseMessage(msg);
