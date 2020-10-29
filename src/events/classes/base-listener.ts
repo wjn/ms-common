@@ -7,7 +7,7 @@ export abstract class Listener<T extends BaseEvent> {
   abstract queueGroupName: string;
   abstract onMessage(data: T['data'], msg: Message): void;
   // stan is nats backwards and what the NATS community calls the NATS client
-  private client: Stan;
+  protected client: Stan;
   // ** protected ** properties are optionally implemented by subclasses
   // ackWait describes the number of milliseconds the NATS server will
   // wait before resending a message
@@ -37,20 +37,13 @@ export abstract class Listener<T extends BaseEvent> {
   listen(): void {
     // make sure to use queueGroupName to make sure that events are
     // distributed to all instances of a listener
-    const subscription = this.client.subscribe(
-      this.topic,
-      this.queueGroupName,
-      this.subscriptionOptions()
-    );
+    const subscription = this.client.subscribe(this.topic, this.queueGroupName, this.subscriptionOptions());
 
     // msg is NOT just the raw data
     subscription.on('message', (msg: Message) => {
       const sequence = msg.getSequence();
 
-      logIt.out(
-        LogType.RECEIVED,
-        `[${this.topic}] [msg #${sequence}] for ${this.queueGroupName} (queueGroup).`
-      );
+      logIt.out(LogType.RECEIVED, `[${this.topic}] [msg #${sequence}] for ${this.queueGroupName} (queueGroup).`);
 
       const parsedData = this.parseMessage(msg);
 
