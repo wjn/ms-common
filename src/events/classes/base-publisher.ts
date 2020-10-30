@@ -6,7 +6,7 @@ export abstract class Publisher<T extends BaseEvent> {
   abstract topic: T['topic'];
 
   // stan is nats backwards and what the NATS community calls the NATS client
-  private client: Stan;
+  protected client: Stan;
 
   constructor(client: Stan) {
     this.client = client;

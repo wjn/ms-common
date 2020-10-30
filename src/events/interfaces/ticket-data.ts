@@ -1,7 +1,8 @@
 export interface TicketData {
   id: string;
+  version: number;
   title: string;
   price: number;
-  version: number;
   userId: string;
+  orderId?: string;
 }
