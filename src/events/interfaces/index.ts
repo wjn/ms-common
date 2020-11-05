@@ -1,5 +1,5 @@
 export * from './base-event';
-export * from './expiration-complete';
+export * from './expiration-complete-event';
 export * from './order-canceled-event';
 export * from './order-created-event';
 export * from './order-data';
