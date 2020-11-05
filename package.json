@@ -1,6 +1,6 @@
 {
   "name": "@nielsendigital/ms-common",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Shared library for ticketing microservices exercise",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
