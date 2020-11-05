@@ -4,7 +4,7 @@ export enum Topics {
   TicketUpdated = 'ticket:updated',
   OrderCreated = 'order:created',
   // will handle order statuses of
-  // CanceledByUser, CanceledUnavailable
+  // CanceledByUser, CanceledUnavailable, OrderExpired
   OrderCanceled = 'order:canceled',
-  OrderExpired = 'order:expired',
+  ExpirationComplete = 'expiration:complete',
 }
