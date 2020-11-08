@@ -3,5 +3,7 @@ import { OrderData } from './order-data';
 
 export interface ExpirationCompleteEvent {
   topic: Topics.ExpirationComplete;
-  data: OrderData;
+  data: {
+    id: string;
+  };
 }
