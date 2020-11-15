@@ -6,3 +6,4 @@ export * from './order-data';
 export * from './ticket-created-event';
 export * from './ticket-data';
 export * from './ticket-updated-event';
+export * from './payment-created-event';

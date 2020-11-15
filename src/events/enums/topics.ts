@@ -7,4 +7,5 @@ export enum Topics {
   // CanceledByUser, CanceledUnavailable, OrderExpired
   OrderCanceled = 'order:canceled',
   ExpirationComplete = 'expiration:complete',
+  PaymentCreated = 'payment:created',
 }
