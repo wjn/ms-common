@@ -7,9 +7,6 @@ export * from './errors';
 // contains nested barrells
 export * from './events';
 
-// LOGGER
-export * from './logger';
-
 // MIDDLEWARES
 export * from './middlewares/current-user';
 export * from './middlewares/error-handler';
