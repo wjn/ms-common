@@ -1,6 +1,6 @@
 import { Stan } from 'node-nats-streaming';
 import { BaseEvent } from '../interfaces';
-import { logIt, LogType } from '../../logger';
+import { logIt, LogType } from '@nielsendigital/logit';
 
 export abstract class Publisher<T extends BaseEvent> {
   abstract topic: T['topic'];

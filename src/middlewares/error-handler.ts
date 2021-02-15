@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { CustomError } from '../errors/custom-error';
-import { logIt, LogType } from '../logger';
+import { logIt, LogType } from '@nielsendigital/logit';
 
 // Create a consistent error response for all services.
 export const errorHandler = (

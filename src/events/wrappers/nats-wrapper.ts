@@ -1,5 +1,5 @@
 import nats, { Stan } from 'node-nats-streaming';
-import { logIt, LogType } from '../../logger';
+import { logIt, LogType } from '@nielsendigital/logit';
 
 class NatsWrapper {
   private _client?: Stan;
